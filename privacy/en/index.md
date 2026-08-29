@@ -8,6 +8,8 @@ Last updated: 2026-08-19
 
 This policy explains how the mobile app "TCG-T" (the "App") handles your information.
 
+---
+
 ## 1. Summary
 
 - **No account registration.** We do not collect your name, email address or phone number.
@@ -102,7 +104,20 @@ The App is not directed to children. If you are a parent or guardian with concer
 
 If we change this policy, we will post the updated text and date on this page, and notify significant changes in the App.
 
-## 10. Provider and contact
+## 10. Contact
 
-Provider: Yoshiki Yatagai (individual developer)  
-Contact: tcg.training.app@gmail.com
+tcg.training.app@gmail.com
+
+Requests to be notified of the purpose of use, or to disclose, correct or stop using your
+retained personal data, are also handled at this address.
+
+## 11. Business information
+
+| Item | Detail |
+|---|---|
+| Business name | AIyabane |
+| Representative | Yoshiki Yatagai |
+| Address | 2F-C Shibuya Dogenzaka Tokyu Building, 1-10-8 Dogenzaka, Shibuya-ku, Tokyo 150-0043, Japan |
+| Contact for personal data matters | tcg.training.app@gmail.com |
+
+Published in accordance with Article 32 of Japan's Act on the Protection of Personal Information.

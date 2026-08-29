@@ -10,9 +10,10 @@ title: TCG-T
 
 - [プライバシーポリシー](./privacy/)
 - [Privacy Policy (English)](./privacy/en/)
+- [特定商取引法に基づく表記](./tokushoho/)
 
 ## お問い合わせ
 
 tcg.training.app@gmail.com
 
-開発者: 矢田貝 祥貴（個人開発）
+提供者: AIyabane（個人事業）／代表 矢田貝 祥貴
