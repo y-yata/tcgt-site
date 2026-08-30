@@ -24,7 +24,7 @@ This policy explains how the mobile app "TCG-T" (the "App") handles your informa
 | Data | Examples |
 |---|---|
 | Game settings | Attributes, deck structure, board design, rules |
-| Card data | Card name, code, attributes, **card images** |
+| Card data | Card name, attributes, **card images** |
 | Decks | Composition, cover card, decorations such as sleeves |
 | Solo run state | Board layout, turn count, saved runs |
 | App settings | Language, theme, number of columns |
