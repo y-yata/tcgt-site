@@ -1,10 +1,20 @@
 ---
-title: TCG-T
+title: AIyabane
 ---
 
-# TCG-T
+# AIyabane
+
+個人開発でモバイルアプリを作っています。
+
+## 製品
+
+### TCG-T（ストア掲載名: TCG Training）
 
 好きなカードゲームを自分で登録して、一人回し（ソロプレイ）で試せるモバイルアプリです。
+カードの登録・デッキの構築・盤面での一人回し・引きの統計までを1つのアプリで扱えます。
+
+- iOS: 準備中
+- Android: 準備中
 
 ## 各種情報
 
@@ -12,8 +22,11 @@ title: TCG-T
 - [Privacy Policy (English)](./privacy/en/)
 - [特定商取引法に基づく表記](./tokushoho/)
 
-## お問い合わせ
+## 事業者情報
 
-tcg.training.app@gmail.com
-
-提供者: AIyabane（個人事業）／代表 矢田貝 祥貴
+| 項目 | 内容 |
+|---|---|
+| 屋号 | AIyabane |
+| 代表 | 矢田貝 祥貴（個人事業） |
+| 所在地 | 〒150-0043 東京都渋谷区道玄坂1丁目10番8号 渋谷道玄坂東急ビル2F-C |
+| 連絡先 | tcg.training.app@gmail.com |

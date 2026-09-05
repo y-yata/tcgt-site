@@ -124,4 +124,4 @@ tcg.training.app@gmail.com
 | 所在地 | 〒150-0043 東京都渋谷区道玄坂1丁目10番8号 渋谷道玄坂東急ビル2F-C |
 | 個人情報の取り扱いに関する窓口 | tcg.training.app@gmail.com |
 
-有料商品の販売条件については[特定商取引法に基づく表記](https://y-yata.github.io/tcgt-site/tokushoho/)をご覧ください。
+有料商品の販売条件については[特定商取引法に基づく表記](../tokushoho/)をご覧ください。
