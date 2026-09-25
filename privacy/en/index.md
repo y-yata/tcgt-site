@@ -4,7 +4,7 @@ title: Privacy Policy | TCG-T
 
 # Privacy Policy
 
-Last updated: 2026-08-19
+Last updated: 2026-09-25
 
 This policy explains how the mobile app "TCG-T" (the "App") handles your information.
 
@@ -24,7 +24,7 @@ This policy explains how the mobile app "TCG-T" (the "App") handles your informa
 | Data | Examples |
 |---|---|
 | Game settings | Attributes, deck structure, board design, rules |
-| Card data | Card name, attributes, **card images** |
+| Card data | Card name, code, attributes, **card images** |
 | Decks | Composition, cover card, decorations such as sleeves |
 | Solo run state | Board layout, turn count, saved runs |
 | App settings | Language, theme, number of columns |
@@ -39,7 +39,7 @@ These are kept in the App's own storage and file area on your device.
 | Anonymous account identifier (a random ID) | Our server (Supabase) | Keeping point balance and decoration entitlements per user | Not linked to your name |
 | Point transaction history | Our server | Calculating balance, preventing duplicate or fraudulent grants | Amount, reason, timestamp |
 | AI usage records | Our server | Enforcing rate limits | Timestamp only |
-| **Card images** | Anthropic, via our server | Autofilling card name and attributes (only when you start it) | Our server does not store them |
+| **Card images** | Anthropic, via our server | Autofilling card name, code and attributes (only when you start it) | Our server does not store them |
 | Decoration entitlements and expiry | Our server | Recording what you exchanged points for | The images themselves are not sent |
 | Advertising identifier, device information, approximate location (from IP) | Google | Serving and measuring ads | See section 3 |
 | Usage analytics (screens viewed, feature counts) | PostHog | Understanding and fixing problems | Can be turned off in settings |
