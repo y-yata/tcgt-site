@@ -12,9 +12,10 @@ This policy explains how the mobile app "TCG-T" (the "App") handles your informa
 
 ## 1. Summary
 
-- **No account registration.** We do not collect your name, email address or phone number.
+- **No account registration.** While you use the App without signing in, we do not collect your name, email address or phone number.
+- **Only if you sign in with Apple or Google do we receive that account's email address (or the relay address Apple issues if you choose "Hide My Email") and an identifier.** We use them only to keep your point balance and decoration entitlements across devices.
 - **Cards, decks, game settings and images you create stay on your device.**
-- We send to servers only: **images you submit to the AI autofill**, **point balance and related records**, and **optional usage analytics**.
+- We send to servers only: **images you submit to the AI autofill**, **the cards of a deck you use in an online match (only during the match)**, **point balance and related records**, **account information if you sign in**, and **optional usage analytics**.
 - The App shows ads (Google AdMob). You can refuse the use of advertising identifiers through the OS setting and the consent screen.
 
 ## 2. What we collect and why
@@ -37,10 +38,13 @@ These are kept in the App's own storage and file area on your device.
 | Data | Recipient | Purpose | Notes |
 |---|---|---|---|
 | Anonymous account identifier (a random ID) | Our server (Supabase) | Keeping point balance and decoration entitlements per user | Not linked to your name |
+| **If you sign in:** email address and sign-in identifier (Apple / Google) | Our server (Supabase) | Keeping the same point balance and decoration entitlements after changing devices or reinstalling | Signing in is optional. We do not store your name |
 | Point transaction history | Our server | Calculating balance, preventing duplicate or fraudulent grants | Amount, reason, timestamp |
-| AI usage records | Our server | Enforcing rate limits | Timestamp only |
+| AI usage records | Our server | Enforcing rate limits, tracking operating costs | Timestamp and processing volume (no image or result content) |
 | **Card images** | Anthropic, via our server | Autofilling card name, code and attributes (only when you start it) | Our server does not store them |
 | Decoration entitlements and expiry | Our server | Recording what you exchanged points for | The images themselves are not sent |
+| Cards of a deck used in an **online match** (name, attributes, card images) | Our server (Supabase) | Showing your cards on your opponent's screen | Visible only to your opponent. Deleted automatically when the table is closed or after it expires (at most 3 hours) |
+| Purchase records (product and time) | RevenueCat | Verifying in-app purchases and granting points / Premium | We do not receive payment details such as card numbers |
 | Advertising identifier, device information, approximate location (from IP) | Google | Serving and measuring ads | See section 3 |
 | Usage analytics (screens viewed, feature counts) | PostHog | Understanding and fixing problems | Can be turned off in settings |
 
@@ -63,11 +67,13 @@ We use the services below and do not share your data beyond these purposes.
 
 | Provider | Use |
 |---|---|
-| Supabase | Anonymous accounts, point ledger, server functions |
+| Supabase | Accounts (anonymous / signed in), point ledger, online matches, server functions |
 | Anthropic | Extracting attributes from card images (AI) |
 | Google (AdMob) | Ad serving and measurement, consent management |
 | PostHog | Usage analytics |
 | Apple / Google (app stores) | Payment processing |
+| Apple / Google (sign-in) | Identity verification if you choose to sign in |
+| RevenueCat | Verifying in-app purchases |
 
 These providers may operate servers outside your country.
 
@@ -76,7 +82,9 @@ These providers may operate servers outside your country.
 - Data on your device is kept until you delete it or delete the App.
 - The point ledger and decoration entitlements on our server are kept **until the account is deleted**, because they determine your balance and rights.
 - AI usage records are only needed for the rate-limit window.
-- **Card images are sent for processing only and are not stored on our server.**
+- **Card images sent to the AI autofill are used for processing only and are not stored on our server.**
+- Cards uploaded for an online match are deleted automatically when the table is closed or after it expires (at most 3 hours).
+- Account information from signing in is kept until the account is deleted.
 
 ## 6. Your choices
 
@@ -86,9 +94,10 @@ These providers may operate servers outside your country.
 | Refuse ad tracking (iOS) | Decline the first-launch prompt, or OS Settings → Privacy & Security → Tracking |
 | Change ad consent (EEA/UK) | Settings → Ads → Ad privacy settings |
 | Delete data on your device | Delete items in the App, or delete the App |
-| Request deletion of server-side data | Contact us using the address below |
+| Delete your account and server-side data (if signed in) | Settings → Account → "Delete TCG-T account" |
+| Request deletion of other server-side data | Contact us using the address below |
 
-**Note:** Accounts are created anonymously. **If you delete the App, the point balance and decoration entitlements of that account cannot be restored.**
+**Note:** While you use the App without signing in, the account is created anonymously. **If you delete the App, the point balance and decoration entitlements of that account cannot be restored.** Signing in with Apple or Google lets you keep them.
 
 ## 7. Children
 
