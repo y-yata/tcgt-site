@@ -3,3 +3,5 @@ description: 個人開発のモバイルアプリを作っています
 url: https://aiyabane.com
 theme: jekyll-theme-minimal
 lang: ja
+exclude:
+  - README.md

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>カードZIPを、自分で作る。 | TCG-T</title><meta name="description" content="ファイルの役割を理解して、画像とカード情報をまとめ、取り込みを確かめます。"><link rel="canonical" href="https://aiyabane.com/tcg-t/guide/zip/"><meta property="og:type" content="website"><meta property="og:title" content="カードZIPを、自分で作る。 | TCG-T"><meta property="og:description" content="ファイルの役割を理解して、画像とカード情報をまとめ、取り込みを確かめます。"><meta property="og:url" content="https://aiyabane.com/tcg-t/guide/zip/"><meta property="og:image" content="https://aiyabane.com/tcg-t/assets/icon.png"><link rel="icon" href="/tcg-t/assets/icon.png"><link rel="stylesheet" href="/tcg-t/assets/site.css"><script src="/tcg-t/assets/site.js" defer></script></head>
+<body><a class="skip" href="#main">本文へスキップ</a><header class="top"><div class="wrap"><a class="brand" href="/tcg-t/"><img src="/tcg-t/assets/icon.png" width="40" height="40" alt=""><span>TCG-T<small>TCG TRAINING</small></span></a><nav aria-label="メインナビゲーション"><a href="/tcg-t/guide/" aria-current="page">使い方</a><a href="/tcg-t/support/" >サポート</a></nav></div></header>
+<main id="main"><div class="page-head"><div class="wrap"><div class="breadcrumb"><a href="/tcg-t/">TCG-T</a><span>/</span><a href="/tcg-t/guide/">使い方</a><span>/ 発展編</span></div><p class="eyebrow">発展編</p><h1>カードZIPを、自分で作る。</h1><p class="description">ファイルの役割を理解して、画像とカード情報をまとめ、取り込みを確かめます。</p><div class="meta">更新：2026年9月27日 · 画面例：iOS版 1.0.0の開発ビルド<br>端末・OS・ゲーム設定により、表示や配置が異なる場合があります。</div></div></div><div class="wrap doc-layout"><aside class="toc" aria-label="このページの目次"><div class="toc-label">このページでわかること</div><a href="#structure">1. ZIPの構造を知る</a><a href="#game">2. game.jsonを作る</a><a href="#cards">3. カードのJSONを作る</a><a href="#images">4. 画像のパスを合わせる</a><a href="#compress">5. ZIPに圧縮する</a><a href="#verify">6. アプリへ取り込んで確かめる</a><a href="#scale">7. 枚数を増やす・AIを使う</a><a href="#errors">読めないときに確認するところ</a><a class="back" href="/tcg-t/guide/">← 使い方の一覧へ</a></aside><article class="article"><div class="note">画面例にはデモカードを使っています。<strong>実際に使うのは、ご自身のカード画像や受け取ったカードZIPです。</strong>ゲーム名・カード名・枚数を読み替えて進めてください。デモデータの入手は不要です。</div><section id="structure"><h2>1. ZIPの構造を知る</h2><p>カードZIPは、ゲーム名と属性定義・カード情報・画像をまとめたファイルです。人のZIPを使うだけなら<a href="/tcg-t/guide/start/">入門編の取り込み手順</a>へ進めます。</p><div class="code"><button type="button" class="copy" data-copy aria-live="polite">コピー</button><pre><code>my-cards/
+├── game.json
+├── cards/
+│   └── cards.json
+└── images/
+    ├── DMO-R05.jpg
+    ├── DMO-R12.jpg
+    └── DMO-R12_p1.jpg</code></pre></div><div class="note">以下のカード名・画像名はデモの説明例です。ご自身の情報・画像に置き換えてください。盤面・クイック操作・組み上がったデッキはこのZIPに含まれません。</div></section><section id="game"><h2>2. game.jsonを作る</h2><p>UTF-8のテキストで保存します。拡張子が .json.txt にならないよう確認してください。format と version は固定、名前と属性は自分のゲームに合わせます。</p><div class="code"><button type="button" class="copy" data-copy aria-live="polite">コピー</button><pre><code>{
+  &quot;format&quot;: &quot;tcgt-cards&quot;,
+  &quot;version&quot;: 1,
+  &quot;game&quot;: {
+    &quot;name&quot;: &quot;デモカードゲーム&quot;,
+    &quot;fields&quot;: [
+      { &quot;key&quot;: &quot;color&quot;, &quot;label&quot;: &quot;色&quot;, &quot;type&quot;: &quot;select&quot;, &quot;options&quot;: [&quot;赤&quot;, &quot;青&quot;, &quot;緑&quot;, &quot;黄&quot;] },
+      { &quot;key&quot;: &quot;kind&quot;, &quot;label&quot;: &quot;種類&quot;, &quot;type&quot;: &quot;select&quot;, &quot;options&quot;: [&quot;ユニット&quot;, &quot;魔法&quot;, &quot;フィールド&quot;] },
+      { &quot;key&quot;: &quot;cost&quot;, &quot;label&quot;: &quot;コスト&quot;, &quot;type&quot;: &quot;number&quot; },
+      { &quot;key&quot;: &quot;power&quot;, &quot;label&quot;: &quot;パワー&quot;, &quot;type&quot;: &quot;number&quot; }
+    ]
+  }
+}</code></pre></div><p>key は属性の識別子、label は表示名です。select の options には選択肢を入れます。型番とカード名は fields へ追加しません。</p></section><section id="cards"><h2>3. カードのJSONを作る</h2><p>cards/cards.json にカードの配列を保存します。code と name は必須です。images の先頭が代表の絵、2枚目以降はパラレルです。</p><div class="code"><button type="button" class="copy" data-copy aria-live="polite">コピー</button><pre><code>[
+  {
+    &quot;code&quot;: &quot;DMO-R05&quot;,
+    &quot;name&quot;: &quot;炉尾の仔&quot;,
+    &quot;attributes&quot;: { &quot;color&quot;: &quot;赤&quot;, &quot;kind&quot;: &quot;ユニット&quot;, &quot;cost&quot;: 1, &quot;power&quot;: 1000 },
+    &quot;images&quot;: [&quot;images/DMO-R05.jpg&quot;]
+  },
+  {
+    &quot;code&quot;: &quot;DMO-R12&quot;,
+    &quot;name&quot;: &quot;熔冠の獣&quot;,
+    &quot;attributes&quot;: { &quot;color&quot;: &quot;赤&quot;, &quot;kind&quot;: &quot;ユニット&quot;, &quot;cost&quot;: 6, &quot;power&quot;: 9000 },
+    &quot;images&quot;: [&quot;images/DMO-R12.jpg&quot;, &quot;images/DMO-R12_p1.jpg&quot;]
+  }
+]</code></pre></div><div class="table-wrap"><table><thead><tr><th scope="col">属性の型</th><th scope="col">値の例</th></tr></thead><tbody><tr><td>text</td><td><code>"説明文"</code></td></tr><tr><td>number</td><td><code>1000</code></td></tr><tr><td>select</td><td><code>"赤"</code></td></tr><tr><td>multiselect</td><td><code>["赤", "青"]</code></td></tr><tr><td>boolean</td><td><code>true</code></td></tr></tbody></table></div><div class="note">デモの色は select なので文字列です。複数選択として設計した場合は配列にします。デッキに3枚入れるためにカードを3行書く必要はありません。採用枚数はデッキ作成で指定します。</div></section><section id="images"><h2>4. 画像のパスを合わせる</h2><ul><li>自分の画像を images/ へ保存します。画像URLを書く方式ではありません。</li><li>ファイル名は半角英数字と - _ . を使うと扱いやすくなります。</li><li>パスはZIP内からの相対パス。先頭の / や ./、上の階層へ戻る .. は使いません。</li><li>大文字小文字・拡張子を一致させます。</li><li>用意しないパラレル画像のパスは削除します。</li></ul><p>同じ型番は同じカードとして扱われます。絵違いは1件の images にまとめると管理しやすくなります。</p></section><section id="compress"><h2>5. ZIPに圧縮する</h2><p>game.json・cards/・images/ を同じフォルダに置き、そのフォルダをZIP形式に圧縮します。外側のフォルダ1階層は取り除いて読めますが、何重にも包まないでください。</p><div class="note">パスワード付きZIP・ZIP64は非対応です。4GB未満、ファイル数65,535未満に収め、まず少数のカードで確認します。</div><h3>Pythonで作る場合</h3><p>Python 3が使える環境で、my-cards の隣に make_zip.py として保存し、<code>python3 make_zip.py</code>を実行します。既存ZIPは上書きしません。</p><div class="code"><button type="button" class="copy" data-copy aria-live="polite">コピー</button><pre><code>from pathlib import Path
+import json
+import zipfile
+
+source = Path(__file__).resolve().parent / &quot;my-cards&quot;
+output = source.parent / &quot;my-cards.zip&quot;
+assert (source / &quot;game.json&quot;).is_file(), &quot;game.jsonがありません&quot;
+assert list((source / &quot;cards&quot;).glob(&quot;*.json&quot;)), &quot;カードJSONがありません&quot;
+files = sorted(p for p in source.rglob(&quot;*&quot;) if p.is_file())
+assert len(files) &lt; 65535, &quot;ファイル数が上限を超えています&quot;
+for path in [source / &quot;game.json&quot;, *sorted((source / &quot;cards&quot;).glob(&quot;*.json&quot;))]:
+    json.loads(path.read_text(encoding=&quot;utf-8&quot;))
+with zipfile.ZipFile(output, &quot;x&quot;, compression=zipfile.ZIP_STORED,
+                     allowZip64=False) as archive:
+    for path in files:
+        archive.write(path, path.relative_to(source).as_posix())
+print(output)</code></pre></div></section><section id="verify"><h2>6. アプリへ取り込んで確かめる</h2><ol><li>ZIPを端末または開けるクラウドへ保存します。</li><li>カード一覧の「＋ 追加」→「ZIP を選ぶ」で開きます。</li><li>件数・画像数・警告を確認します。この例ではカード2種類・画像3枚です。</li><li>下書きを確認して保存し、名前・型番・属性・パラレルを確認します。</li></ol><p>最初は新しい確認用ゲームへ入れると、既存カードへの追加を避けて確認できます。新しいゲームとして取り込んだ場合、遊ぶための盤面とデッキ設定は別に用意します。</p></section><section id="scale"><h2>7. 枚数を増やす・AIを使う</h2><p>cards/set1.json、cards/set2.json のように複数ファイルへ分けられます。各ファイルをカードの配列にします。</p><p>アプリの「AI 用の仕様をコピー」をAIへ渡し、カード情報と実在する画像ファイル名の一覧を添えます。不足情報は推測させず一覧にし、大量の場合は生成用スクリプトと実行手順を依頼します。少数で取り込みを確認してから増やしてください。</p><p>登録済みカードからなら、カード一覧の「書き出す」でも同じ形式のZIPを作れます。型番がないカードは採番の確認が入ります。</p></section><section id="errors"><h2>読めないときに確認するところ</h2><div class="table-wrap"><table><thead><tr><th scope="col">症状</th><th scope="col">確認すること</th></tr></thead><tbody><tr><td>game.jsonがない</td><td>階層、ファイル名、拡張子</td></tr><tr><td>JSONを読めない</td><td>カンマ、引用符、括弧、UTF-8</td></tr><tr><td>画像が見つからない</td><td>実ファイルと相対パス、大文字小文字</td></tr><tr><td>属性が空になる</td><td>key、値の型、optionsとの一致</td></tr><tr><td>件数が少ない</td><td>同じ型番にまとめられていないか</td></tr><tr><td>再取り込みで増えない</td><td>同じ型番・同じ絵はスキップされます</td></tr></tbody></table></div></section><div class="next"><span>次に進む</span><a href="/tcg-t/guide/deck/">登録したカードでデッキを組む →</a></div></article></div></main>
+<footer><div class="wrap"><div><strong>TCG-T / TCG Training</strong><br>© AIyabane</div><div class="foot-links"><a href="/">AIyabane</a><a href="/privacy/">プライバシーポリシー</a><a href="/tokushoho/">特定商取引法に基づく表記</a><a href="/tcg-t/updates/">更新情報</a></div></div></footer></body></html>
