@@ -21,6 +21,7 @@
 - `tcg-t/guide/start/`：入門（設定・自分の画像・受け取ったZIP）
 - `tcg-t/guide/deck/`：デッキ作成
 - `tcg-t/guide/solo/`：一人回し
+- `tcg-t/guide/probability/`：確率計算（ドロー計算機・コンボ確率・確率の読み）
 - `tcg-t/guide/online/`：オンライン
 - `tcg-t/guide/custom/`：発展（詳細設定・クイック操作）
 - `tcg-t/guide/zip/`：発展（ZIP作成）
