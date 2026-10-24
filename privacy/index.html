@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>プライバシーポリシー | TCG-T</title><meta name="description" content="TCG-T（TCG Training）における個人情報等の取り扱い。"><link rel="canonical" href="https://aiyabane.com/privacy/"><link rel="icon" href="/tcg-t/assets/icon.png"><link rel="stylesheet" href="/tcg-t/assets/site.css"></head>
+<body><a class="skip" href="#main">本文へスキップ</a><header class="top"><div class="wrap"><a class="brand" href="/tcg-t/"><img src="/tcg-t/assets/icon.png" width="40" height="40" alt=""><span>TCG-T<small>TCG TRAINING</small></span></a><nav aria-label="メインナビゲーション"><a href="/tcg-t/guide/">使い方</a><a href="/tcg-t/support/">サポート</a></nav></div></header>
+<main id="main"><div class="page-head"><div class="wrap"><div class="breadcrumb"><a href="/">AIyabane</a><span>/</span><a href="/tcg-t/">TCG-T</a><span>/ プライバシーポリシー</span></div><p class="eyebrow">PRIVACY POLICY</p><h1>プライバシーポリシー</h1><p class="description">TCG-T（TCG Training）における個人情報等の取り扱い。</p><div class="meta">最終更新: 2026-10-24 · <a href="/privacy/en/">English</a></div></div></div>
+<div class="wrap legal-body"><article class="article">
+<p>本ポリシーは、モバイルアプリ「TCG-T」（以下「本アプリ」）における個人情報等の取り扱いを定めるものです。</p>
+<hr>
+<h2>1. まとめ</h2>
+<ul>
+<li><strong>アカウント登録は不要です。</strong> ログインせずに使っている間は、氏名・メールアドレス・電話番号を取得しません。</li>
+<li><strong>Apple または Google でログインした場合に限り、そのアカウントのメールアドレス（Apple の「メールを非公開」を選んだ場合は Apple が発行する中継用アドレス）と識別子を受け取ります。</strong> ポイント残高と装飾の権利を機種変更後も引き継ぐためだけに使います。</li>
+<li><strong>登録したカード・デッキ・ゲーム設定・画像は、原則として端末の中だけに保存されます。</strong></li>
+<li>サーバーへ送るのは、<strong>AIによる自動入力を使ったときの画像</strong>、<strong>オンライン対戦で使うデッキのカード（対戦中だけ）</strong>、<strong>ポイント残高・購入や広告視聴の記録</strong>、<strong>ログインした場合のアカウント情報</strong>、<strong>任意の利用状況</strong>だけです。</li>
+<li>広告（Google AdMob）を表示します。広告のための識別子の利用は、端末の設定と同意画面で拒否できます。</li>
+</ul>
+<h2>2. 取得する情報と目的</h2>
+<h3>2-1. 端末内だけに保存されるもの（送信しません）</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>情報</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ゲーム設定</td>
+<td>属性・デッキ構成・盤面デザイン・ルール</td>
+</tr>
+<tr>
+<td>カード情報</td>
+<td>カード名・型番・属性・<strong>カード画像</strong></td>
+</tr>
+<tr>
+<td>デッキ</td>
+<td>構成、代表カード、スリーブなどの装飾設定</td>
+</tr>
+<tr>
+<td>進行中／中断中の一人回しの状態</td>
+<td>盤面の配置、ターン数</td>
+</tr>
+<tr>
+<td>アプリの設定</td>
+<td>表示言語、テーマ、表示列数</td>
+</tr>
+</tbody></table></div>
+<p>これらは端末のアプリ領域（アプリ内ストレージおよびファイル領域）に保存されます。
+<strong>アプリを削除すると、これらは端末から削除されます。</strong></p>
+<h3>2-2. サーバーへ送信するもの</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>情報</th>
+<th>送信先</th>
+<th>目的</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>匿名アカウントの識別子（ランダムなID）</td>
+<td>当方のサーバー（Supabase）</td>
+<td>ポイント残高と装飾の権利をユーザーごとに管理するため</td>
+<td>氏名等とは結び付きません</td>
+</tr>
+<tr>
+<td><strong>ログインした場合</strong>のメールアドレスとログイン方法の識別子（Apple / Google）</td>
+<td>当方のサーバー（Supabase）</td>
+<td>機種変更や再インストールのあとも、同じポイント残高と装飾の権利を引き継ぐため</td>
+<td>ログインは任意です。氏名は保存しません</td>
+</tr>
+<tr>
+<td>ポイントの増減履歴</td>
+<td>当方のサーバー</td>
+<td>残高の算定、二重付与・不正利用の防止</td>
+<td>増減値・理由・日時</td>
+</tr>
+<tr>
+<td>AI機能の利用記録</td>
+<td>当方のサーバー</td>
+<td>利用回数の上限（レート制限）の判定、運営費用の把握</td>
+<td>日時・処理量（画像や結果の内容は含みません）</td>
+</tr>
+<tr>
+<td><strong>カード画像</strong></td>
+<td>当方のサーバーを経由して Anthropic</td>
+<td>カード名・型番・属性の自動入力（ユーザーが実行したときのみ）</td>
+<td>当方のサーバーでは保存しません</td>
+</tr>
+<tr>
+<td>装飾（スリーブ・プレイマット）の権利と有効期限</td>
+<td>当方のサーバー</td>
+<td>交換した権利の記録</td>
+<td>画像そのものは送信しません</td>
+</tr>
+<tr>
+<td><strong>オンライン対戦</strong>で使うデッキのカード（カード名・属性・カード画像）</td>
+<td>当方のサーバー（Supabase）</td>
+<td>対戦相手の画面にカードを表示するため</td>
+<td>対戦相手だけが見られます。卓を閉じたとき、または卓の期限（最長3時間）が過ぎたあとに自動で削除します</td>
+</tr>
+<tr>
+<td>購入の記録（購入した商品・日時）</td>
+<td>RevenueCat</td>
+<td>アプリ内課金の確認と、ポイント・プレミアムの付与</td>
+<td>支払い情報（カード番号など）は受け取りません</td>
+</tr>
+<tr>
+<td>広告識別子・端末情報・おおよその所在地（IPに基づく）</td>
+<td>Google</td>
+<td>広告の配信と測定</td>
+<td>下記 3 を参照</td>
+</tr>
+<tr>
+<td>利用状況（画面の表示、機能の実行回数など）</td>
+<td>PostHog</td>
+<td>不具合の把握と改善</td>
+<td>設定でオフにできます</td>
+</tr>
+</tbody></table></div>
+<p><strong>AI機能は、ユーザーが「AIで自動入力」を実行したときにだけ画像を送信します。</strong>
+アプリが自動的に画像を送信することはありません。</p>
+<h2>3. 広告について</h2>
+<p>本アプリは Google AdMob による広告を表示します（有料プランのご利用中は表示しません）。</p>
+<ul>
+<li>広告の配信・測定のために、<strong>広告識別子（iOS の IDFA / Android の広告ID）や端末情報、IPアドレスに基づくおおよその所在地</strong>が Google に送信されることがあります。</li>
+<li><strong>iOS では、初回起動時に「トラッキングの許可」を確認します。</strong> 拒否した場合、識別子は利用されません（広告は表示されますが、内容が利用者に合わせて選ばれなくなります）。</li>
+<li><strong>欧州経済領域・英国では、広告のためのデータ利用について同意を確認します。</strong> 同意しない場合、そのための利用は行いません。同意の内容は、アプリの「設定 → 広告 → 広告のプライバシー設定」からいつでも変更できます。</li>
+<li>動画広告を最後まで視聴するとポイントを付与します。この判定は Google からの通知に基づいて当方のサーバーで行います。</li>
+</ul>
+<p>Google によるデータの取り扱いについては、Google のポリシーをご確認ください。</p>
+<h2>4. 第三者への提供・委託</h2>
+<p>以下のサービスを利用しています。目的の範囲を超えた提供は行いません。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>事業者</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supabase</td>
+<td>アカウント（匿名／ログイン）、ポイント台帳、オンライン対戦、サーバー処理の実行基盤</td>
+</tr>
+<tr>
+<td>Anthropic</td>
+<td>カード画像からの属性抽出（AI）</td>
+</tr>
+<tr>
+<td>Google（AdMob）</td>
+<td>広告の配信・測定、同意管理</td>
+</tr>
+<tr>
+<td>PostHog</td>
+<td>利用状況の分析</td>
+</tr>
+<tr>
+<td>Apple / Google（アプリストア）</td>
+<td>課金の処理</td>
+</tr>
+<tr>
+<td>Apple / Google（ログイン）</td>
+<td>ログインを選んだ場合の本人確認</td>
+</tr>
+<tr>
+<td>RevenueCat</td>
+<td>アプリ内課金の購入確認</td>
+</tr>
+</tbody></table></div>
+<p>各事業者のサーバーは日本国外に所在する場合があります。</p>
+<h2>5. 保存期間</h2>
+<ul>
+<li>端末内のデータは、利用者が削除するかアプリを削除するまで保持されます。</li>
+<li>サーバー上のポイント台帳・装飾の権利は、<strong>残高や権利の正しさを保つため、アカウントの削除まで保持します</strong>。</li>
+<li>AI機能の利用記録は、レート制限の判定に必要な期間を過ぎたものから順次不要になります。</li>
+<li><strong>AIの自動入力で送るカード画像は、処理のために送信されるだけで、当方のサーバーには保存しません。</strong></li>
+<li>オンライン対戦のためにアップロードしたカードは、卓を閉じたとき、または卓の期限（最長3時間）が過ぎたあとに自動で削除します。</li>
+<li>ログインした場合のアカウント情報は、アカウントを削除するまで保持します。</li>
+</ul>
+<h2>6. 利用者の選択</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>したいこと</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>利用状況の送信を止める</td>
+<td>設定 → プライバシー →「利用状況の共有」をオフ</td>
+</tr>
+<tr>
+<td>広告のためのトラッキングを拒否する（iOS）</td>
+<td>初回の確認で拒否、または OS の「設定 → プライバシーとセキュリティ → トラッキング」</td>
+</tr>
+<tr>
+<td>広告の同意を変更する（欧州等）</td>
+<td>設定 → 広告 →「広告のプライバシー設定」</td>
+</tr>
+<tr>
+<td>端末内のデータを消す</td>
+<td>アプリ内で個別に削除、またはアプリを削除</td>
+</tr>
+<tr>
+<td>サーバー上のアカウントとデータを削除する（ログインしている場合）</td>
+<td>設定 → アカウント →「TCG-T のアカウントを削除」</td>
+</tr>
+<tr>
+<td>サーバー上のデータの削除を求める（上記以外）</td>
+<td>下記の連絡先へご連絡ください</td>
+</tr>
+</tbody></table></div>
+<p><strong>注意:</strong> ログインせずに使っている間、本アプリのアカウントは匿名で作られるため、<strong>アプリを削除すると、そのアカウントのポイント残高や装飾の権利を復元できません。</strong> Apple または Google でログインしておくと引き継げます。</p>
+<h2>7. 子どもの利用について</h2>
+<p>本アプリは子ども向けに設計されたものではありません。
+保護者の方が、お子様の利用に関して懸念をお持ちの場合は、下記の連絡先へご連絡ください。</p>
+<h2>8. 安全管理</h2>
+<ul>
+<li>通信は暗号化（HTTPS）しています。</li>
+<li>サーバー上のデータは、<strong>本人のアカウントからのみ読み取れるよう制限</strong>しています（行単位のアクセス制御）。</li>
+<li>ポイントの増減や権利の付与は、<strong>サーバー側でのみ実行</strong>できるようにしています。</li>
+</ul>
+<h2>9. 本ポリシーの変更</h2>
+<p>内容を変更する場合は、本ページに変更後の内容と最終更新日を掲載します。
+重要な変更を行う場合は、アプリ内でお知らせします。</p>
+<h2>10. お問い合わせ</h2>
+<p><a href="mailto:tcg.training.app@gmail.com">tcg.training.app@gmail.com</a></p>
+<p>保有個人データの利用目的の通知・開示・訂正・利用停止等のご請求も、上記の窓口で承ります。</p>
+<h2>11. 事業者の情報</h2>
+<p>個人情報保護法第32条に基づき、以下を公表します。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>事業者の名称</td>
+<td>AIyabane</td>
+</tr>
+<tr>
+<td>所在地</td>
+<td>〒150-0043 東京都渋谷区道玄坂1丁目10番8号 渋谷道玄坂東急ビル2F-C</td>
+</tr>
+<tr>
+<td>個人情報の取り扱いに関する窓口</td>
+<td><a href="mailto:tcg.training.app@gmail.com">tcg.training.app@gmail.com</a></td>
+</tr>
+</tbody></table></div>
+<p>代表者の氏名は、上記の窓口へご請求をいただいた場合、遅滞なく回答いたします。</p>
+<p>有料商品の販売条件については<a href="/tokushoho/">特定商取引法に基づく表記</a>をご覧ください。</p>
+</article></div></main>
+<footer><div class="wrap"><div><strong>TCG-T / TCG Training</strong><br>© AIyabane</div><div class="foot-links"><a href="/">AIyabane</a><a href="/tcg-t/support/">お問い合わせ</a><a href="/privacy/">プライバシーポリシー</a><a href="/tokushoho/">特定商取引法に基づく表記</a><a href="/delete-account/">アカウントの削除</a><a href="/tcg-t/updates/">更新情報</a></div></div></footer></body></html>

@@ -1,11 +1,14 @@
 ---
 title: Privacy Policy | TCG-T
+out: privacy/en/index.html
+lang: en
+eyebrow: PRIVACY POLICY
+heading: Privacy Policy
+description: How TCG-T (TCG Training) handles personal information.
+alt: /privacy/
+altlabel: 日本語
+updated: 2026-10-24
 ---
-
-# Privacy Policy
-
-Last updated: 2026-09-25
-
 This policy explains how the mobile app "TCG-T" (the "App") handles your information.
 
 ---
@@ -125,8 +128,9 @@ retained personal data, are also handled at this address.
 | Item | Detail |
 |---|---|
 | Business name | AIyabane |
-| Representative | Yoshiki Yatagai |
 | Address | 2F-C Shibuya Dogenzaka Tokyu Building, 1-10-8 Dogenzaka, Shibuya-ku, Tokyo 150-0043, Japan |
 | Contact for personal data matters | tcg.training.app@gmail.com |
+
+The name of the representative will be provided without delay upon request to the contact above.
 
 Published in accordance with Article 32 of Japan's Act on the Protection of Personal Information.

@@ -1,11 +1,13 @@
 ---
 title: Delete your account | TCG-T
+out: delete-account/en/index.html
+lang: en
+eyebrow: ACCOUNT
+heading: Delete your TCG-T account
+description: How to delete your TCG-T account and data.
+alt: /delete-account/
+altlabel: 日本語
 ---
-
-# Delete your TCG-T account
-
-[日本語](../)
-
 This page explains how to delete your account and data for "TCG-T" (store name: TCG Training), an app provided by AIyabane.
 
 ## Delete in the app (if you are signed in)
@@ -42,4 +44,4 @@ If you have already deleted the app, email us with the email address of the Appl
 
 While you use the app without signing in, your account is anonymous and holds no information that identifies you. If you delete the app, that account's data can no longer be restored. To request deletion of server-side data, contact us at the address above.
 
-See the [Privacy Policy](../../privacy/en/) for details.
+See the [Privacy Policy](/privacy/en/) for details.

@@ -1,11 +1,13 @@
 ---
 title: アカウントの削除 | TCG-T
+out: delete-account/index.html
+lang: ja
+eyebrow: ACCOUNT
+heading: TCG-T のアカウントを削除する
+description: TCG-T のアカウントとデータを削除する方法。
+alt: /delete-account/en/
+altlabel: English
 ---
-
-# TCG-T のアカウントを削除する
-
-[English](./en/)
-
 このページは、AIyabane が提供するアプリ「TCG-T」（ストア掲載名: TCG Training）のアカウントとデータを削除する方法を説明します。
 
 ## アプリから削除する（ログインしている場合）
@@ -42,4 +44,4 @@ title: アカウントの削除 | TCG-T
 
 ログインせずに使っている間のアカウントは匿名で、本人を特定できる情報を持っていません。アプリを削除すると、そのアカウントのデータは復元できなくなります。サーバー上のデータの削除を求める場合は、上記の連絡先へご連絡ください。
 
-詳しくは[プライバシーポリシー](../privacy/)をご覧ください。
+詳しくは[プライバシーポリシー](/privacy/)をご覧ください。

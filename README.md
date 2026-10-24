@@ -1,6 +1,18 @@
 # AIyabane / TCG-T サイト
 
-既存の GitHub Pages サイトです。ドメイン・Jekyll設定・法務ページは従来の構成を使います。
+既存の GitHub Pages サイトです（CNAME `aiyabane.com`）。2026-10-24 から、全ページを**ビルド不要の HTML**にそろえた（Jekyll のテーマは使っていない）。
+
+## 構成
+
+| URL | ファイル | 作り方 |
+|---|---|---|
+| `/` | `index.html` | 直接編集（AIyabane の入口・アプリ一覧・事業者情報） |
+| `/privacy/`・`/privacy/en/`・`/tokushoho/`・`/delete-account/`・`/delete-account/en/` | 各 `index.html` | **原稿 `_src/*.md` を `python3 tools/build_pages.py` で組み立てる**。HTML を直接直さない |
+| `/tcg-t/…` | 各 `index.html` | 直接編集（下記） |
+
+- 見た目は全ページ `tcg-t/assets/site.css` を使う。ヘッダー・フッターを変えるときは、`tools/build_pages.py` のテンプレートと `index.html`・`tcg-t/` の各ページの両方を直す
+- **URL を動かさない。** ストアの登録・アプリ内・AdMob の同意メッセージから指している
+- 事業者の氏名は載せない（特商法・個人情報保護法とも「請求があれば遅滞なく開示」の書き方。方針は本部 `private/business-identity.md`）
 
 ## TCG-T のページ
 
@@ -20,7 +32,7 @@ TCG-T配下はビルド不要のHTML/CSS/JavaScriptです。各HTMLを直接編�
 
 ## ローカル確認
 
-リポジトリ直下で `python3 -m http.server 8765 --bind 127.0.0.1` を実行し、`http://127.0.0.1:8765/tcg-t/` を開きます。この簡易サーバーはMarkdownを変換しないため、既存のトップ・法務ページの表示確認にはJekyllが必要です。
+リポジトリ直下で `python3 -m http.server 8765 --bind 127.0.0.1` を実行し、`http://127.0.0.1:8765/tcg-t/` を開きます。法律まわりのページも組み立て済みの HTML なので、この簡易サーバーで確認できます。
 
 ## 公開前の確認
 

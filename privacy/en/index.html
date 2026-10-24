@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy Policy | TCG-T</title><meta name="description" content="How TCG-T (TCG Training) handles personal information."><link rel="canonical" href="https://aiyabane.com/privacy/en/"><link rel="icon" href="/tcg-t/assets/icon.png"><link rel="stylesheet" href="/tcg-t/assets/site.css"></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap"><a class="brand" href="/tcg-t/"><img src="/tcg-t/assets/icon.png" width="40" height="40" alt=""><span>TCG-T<small>TCG TRAINING</small></span></a><nav aria-label="Main navigation"><a href="/tcg-t/guide/">Guide (Japanese)</a><a href="/tcg-t/support/">Support</a></nav></div></header>
+<main id="main"><div class="page-head"><div class="wrap"><div class="breadcrumb"><a href="/">AIyabane</a><span>/</span><a href="/tcg-t/">TCG-T</a><span>/ Privacy Policy</span></div><p class="eyebrow">PRIVACY POLICY</p><h1>Privacy Policy</h1><p class="description">How TCG-T (TCG Training) handles personal information.</p><div class="meta">Last updated: 2026-10-24 · <a href="/privacy/">日本語</a></div></div></div>
+<div class="wrap legal-body"><article class="article">
+<p>This policy explains how the mobile app &quot;TCG-T&quot; (the &quot;App&quot;) handles your information.</p>
+<hr>
+<h2>1. Summary</h2>
+<ul>
+<li><strong>No account registration.</strong> While you use the App without signing in, we do not collect your name, email address or phone number.</li>
+<li><strong>Only if you sign in with Apple or Google do we receive that account&#39;s email address (or the relay address Apple issues if you choose &quot;Hide My Email&quot;) and an identifier.</strong> We use them only to keep your point balance and decoration entitlements across devices.</li>
+<li><strong>Cards, decks, game settings and images you create stay on your device.</strong></li>
+<li>We send to servers only: <strong>images you submit to the AI autofill</strong>, <strong>the cards of a deck you use in an online match (only during the match)</strong>, <strong>point balance and related records</strong>, <strong>account information if you sign in</strong>, and <strong>optional usage analytics</strong>.</li>
+<li>The App shows ads (Google AdMob). You can refuse the use of advertising identifiers through the OS setting and the consent screen.</li>
+</ul>
+<h2>2. What we collect and why</h2>
+<h3>2-1. Stored only on your device (never sent)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Game settings</td>
+<td>Attributes, deck structure, board design, rules</td>
+</tr>
+<tr>
+<td>Card data</td>
+<td>Card name, code, attributes, <strong>card images</strong></td>
+</tr>
+<tr>
+<td>Decks</td>
+<td>Composition, cover card, decorations such as sleeves</td>
+</tr>
+<tr>
+<td>Solo run state</td>
+<td>Board layout, turn count, saved runs</td>
+</tr>
+<tr>
+<td>App settings</td>
+<td>Language, theme, number of columns</td>
+</tr>
+</tbody></table></div>
+<p>These are kept in the App&#39;s own storage and file area on your device.
+<strong>Deleting the App removes them from the device.</strong></p>
+<h3>2-2. Sent to servers</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Recipient</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anonymous account identifier (a random ID)</td>
+<td>Our server (Supabase)</td>
+<td>Keeping point balance and decoration entitlements per user</td>
+<td>Not linked to your name</td>
+</tr>
+<tr>
+<td><strong>If you sign in:</strong> email address and sign-in identifier (Apple / Google)</td>
+<td>Our server (Supabase)</td>
+<td>Keeping the same point balance and decoration entitlements after changing devices or reinstalling</td>
+<td>Signing in is optional. We do not store your name</td>
+</tr>
+<tr>
+<td>Point transaction history</td>
+<td>Our server</td>
+<td>Calculating balance, preventing duplicate or fraudulent grants</td>
+<td>Amount, reason, timestamp</td>
+</tr>
+<tr>
+<td>AI usage records</td>
+<td>Our server</td>
+<td>Enforcing rate limits, tracking operating costs</td>
+<td>Timestamp and processing volume (no image or result content)</td>
+</tr>
+<tr>
+<td><strong>Card images</strong></td>
+<td>Anthropic, via our server</td>
+<td>Autofilling card name, code and attributes (only when you start it)</td>
+<td>Our server does not store them</td>
+</tr>
+<tr>
+<td>Decoration entitlements and expiry</td>
+<td>Our server</td>
+<td>Recording what you exchanged points for</td>
+<td>The images themselves are not sent</td>
+</tr>
+<tr>
+<td>Cards of a deck used in an <strong>online match</strong> (name, attributes, card images)</td>
+<td>Our server (Supabase)</td>
+<td>Showing your cards on your opponent&#39;s screen</td>
+<td>Visible only to your opponent. Deleted automatically when the table is closed or after it expires (at most 3 hours)</td>
+</tr>
+<tr>
+<td>Purchase records (product and time)</td>
+<td>RevenueCat</td>
+<td>Verifying in-app purchases and granting points / Premium</td>
+<td>We do not receive payment details such as card numbers</td>
+</tr>
+<tr>
+<td>Advertising identifier, device information, approximate location (from IP)</td>
+<td>Google</td>
+<td>Serving and measuring ads</td>
+<td>See section 3</td>
+</tr>
+<tr>
+<td>Usage analytics (screens viewed, feature counts)</td>
+<td>PostHog</td>
+<td>Understanding and fixing problems</td>
+<td>Can be turned off in settings</td>
+</tr>
+</tbody></table></div>
+<p><strong>The AI feature sends an image only when you tap &quot;Autofill with AI&quot;.</strong> The App never sends images on its own.</p>
+<h2>3. Advertising</h2>
+<p>The App shows ads through Google AdMob (not shown while a paid plan is active).</p>
+<ul>
+<li>To serve and measure ads, your <strong>advertising identifier (IDFA on iOS / Advertising ID on Android), device information and approximate location based on IP address</strong> may be sent to Google.</li>
+<li><strong>On iOS, we ask for tracking permission on first launch.</strong> If you refuse, the identifier is not used (ads still appear, but they are not selected based on you).</li>
+<li><strong>In the European Economic Area and the UK we ask for your consent</strong> before using data for advertising. If you do not consent, we do not use it. You can change your choice at any time from <strong>Settings → Ads → Ad privacy settings</strong>.</li>
+<li>Watching a rewarded video to the end grants points. That is confirmed by a notification from Google and applied on our server.</li>
+</ul>
+<p>Please also refer to Google&#39;s own policies for how Google handles this data.</p>
+<h2>4. Service providers</h2>
+<p>We use the services below and do not share your data beyond these purposes.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supabase</td>
+<td>Accounts (anonymous / signed in), point ledger, online matches, server functions</td>
+</tr>
+<tr>
+<td>Anthropic</td>
+<td>Extracting attributes from card images (AI)</td>
+</tr>
+<tr>
+<td>Google (AdMob)</td>
+<td>Ad serving and measurement, consent management</td>
+</tr>
+<tr>
+<td>PostHog</td>
+<td>Usage analytics</td>
+</tr>
+<tr>
+<td>Apple / Google (app stores)</td>
+<td>Payment processing</td>
+</tr>
+<tr>
+<td>Apple / Google (sign-in)</td>
+<td>Identity verification if you choose to sign in</td>
+</tr>
+<tr>
+<td>RevenueCat</td>
+<td>Verifying in-app purchases</td>
+</tr>
+</tbody></table></div>
+<p>These providers may operate servers outside your country.</p>
+<h2>5. Retention</h2>
+<ul>
+<li>Data on your device is kept until you delete it or delete the App.</li>
+<li>The point ledger and decoration entitlements on our server are kept <strong>until the account is deleted</strong>, because they determine your balance and rights.</li>
+<li>AI usage records are only needed for the rate-limit window.</li>
+<li><strong>Card images sent to the AI autofill are used for processing only and are not stored on our server.</strong></li>
+<li>Cards uploaded for an online match are deleted automatically when the table is closed or after it expires (at most 3 hours).</li>
+<li>Account information from signing in is kept until the account is deleted.</li>
+</ul>
+<h2>6. Your choices</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stop sending usage analytics</td>
+<td>Settings → Privacy → turn off &quot;Share usage data&quot;</td>
+</tr>
+<tr>
+<td>Refuse ad tracking (iOS)</td>
+<td>Decline the first-launch prompt, or OS Settings → Privacy &amp; Security → Tracking</td>
+</tr>
+<tr>
+<td>Change ad consent (EEA/UK)</td>
+<td>Settings → Ads → Ad privacy settings</td>
+</tr>
+<tr>
+<td>Delete data on your device</td>
+<td>Delete items in the App, or delete the App</td>
+</tr>
+<tr>
+<td>Delete your account and server-side data (if signed in)</td>
+<td>Settings → Account → &quot;Delete TCG-T account&quot;</td>
+</tr>
+<tr>
+<td>Request deletion of other server-side data</td>
+<td>Contact us using the address below</td>
+</tr>
+</tbody></table></div>
+<p><strong>Note:</strong> While you use the App without signing in, the account is created anonymously. <strong>If you delete the App, the point balance and decoration entitlements of that account cannot be restored.</strong> Signing in with Apple or Google lets you keep them.</p>
+<h2>7. Children</h2>
+<p>The App is not directed to children. If you are a parent or guardian with concerns about your child&#39;s use, please contact us.</p>
+<h2>8. Security</h2>
+<ul>
+<li>Traffic is encrypted (HTTPS).</li>
+<li>Server-side data is restricted so that <strong>only your own account can read it</strong> (row-level access control).</li>
+<li>Points and entitlements can only be granted by the server, never by the app itself.</li>
+</ul>
+<h2>9. Changes to this policy</h2>
+<p>If we change this policy, we will post the updated text and date on this page, and notify significant changes in the App.</p>
+<h2>10. Contact</h2>
+<p><a href="mailto:tcg.training.app@gmail.com">tcg.training.app@gmail.com</a></p>
+<p>Requests to be notified of the purpose of use, or to disclose, correct or stop using your
+retained personal data, are also handled at this address.</p>
+<h2>11. Business information</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Business name</td>
+<td>AIyabane</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>2F-C Shibuya Dogenzaka Tokyu Building, 1-10-8 Dogenzaka, Shibuya-ku, Tokyo 150-0043, Japan</td>
+</tr>
+<tr>
+<td>Contact for personal data matters</td>
+<td><a href="mailto:tcg.training.app@gmail.com">tcg.training.app@gmail.com</a></td>
+</tr>
+</tbody></table></div>
+<p>The name of the representative will be provided without delay upon request to the contact above.</p>
+<p>Published in accordance with Article 32 of Japan&#39;s Act on the Protection of Personal Information.</p>
+</article></div></main>
+<footer><div class="wrap"><div><strong>TCG-T / TCG Training</strong><br>© AIyabane</div><div class="foot-links"><a href="/">AIyabane</a><a href="/tcg-t/support/">Contact</a><a href="/privacy/en/">Privacy Policy</a><a href="/delete-account/en/">Delete your account</a></div></div></footer></body></html>

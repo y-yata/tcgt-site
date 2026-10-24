@@ -1,11 +1,14 @@
 ---
 title: プライバシーポリシー | TCG-T
+out: privacy/index.html
+lang: ja
+eyebrow: PRIVACY POLICY
+heading: プライバシーポリシー
+description: TCG-T（TCG Training）における個人情報等の取り扱い。
+alt: /privacy/en/
+altlabel: English
+updated: 2026-10-24
 ---
-
-# プライバシーポリシー
-
-最終更新: 2026-09-25
-
 本ポリシーは、モバイルアプリ「TCG-T」（以下「本アプリ」）における個人情報等の取り扱いを定めるものです。
 
 ---
@@ -129,8 +132,9 @@ tcg.training.app@gmail.com
 | 項目 | 内容 |
 |---|---|
 | 事業者の名称 | AIyabane |
-| 代表者 | 矢田貝 祥貴 |
 | 所在地 | 〒150-0043 東京都渋谷区道玄坂1丁目10番8号 渋谷道玄坂東急ビル2F-C |
 | 個人情報の取り扱いに関する窓口 | tcg.training.app@gmail.com |
 
-有料商品の販売条件については[特定商取引法に基づく表記](../tokushoho/)をご覧ください。
+代表者の氏名は、上記の窓口へご請求をいただいた場合、遅滞なく回答いたします。
+
+有料商品の販売条件については[特定商取引法に基づく表記](/tokushoho/)をご覧ください。
