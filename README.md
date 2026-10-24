@@ -10,6 +10,7 @@
 | `/privacy/`・`/privacy/en/`・`/tokushoho/`・`/delete-account/`・`/delete-account/en/` | 各 `index.html` | **原稿 `_src/*.md` を `python3 tools/build_pages.py` で組み立てる**。HTML を直接直さない |
 | `/tcg-t/…` | 各 `index.html` | 直接編集（下記） |
 
+- `/tcg-t/` 以下のページの共有用画像（OGP）は `tcg-t/assets/ogp.png`（1200×630。元は TCG-T の `assets/brand/tcgt-ogp-v1.svg`）。X 用に `twitter:card` を `summary_large_image` にしている。屋号のトップ（`/`）はアプリアイコンのまま
 - 見た目は全ページ `tcg-t/assets/site.css` を使う。ヘッダー・フッターを変えるときは、`tools/build_pages.py` のテンプレートと `index.html`・`tcg-t/` の各ページの両方を直す
 - **URL を動かさない。** ストアの登録・アプリ内・AdMob の同意メッセージから指している
 - 事業者の氏名は載せない（特商法・個人情報保護法とも「請求があれば遅滞なく開示」の書き方。方針は本部 `private/business-identity.md`）
