@@ -25,21 +25,24 @@
 - `tcg-t/guide/custom/`：発展（詳細設定・クイック操作）
 - `tcg-t/guide/zip/`：発展（ZIP作成）
 - `tcg-t/guide/decorations/`：装飾（スリーブ・プレイマット・利用条件）
+- `tcg-t/guide/billing/`：料金・ポイント・Premium（価格はストアの表示に合わせる）
 - `tcg-t/support/`：FAQ・問い合わせ
 - `tcg-t/updates/`：更新情報
 
-TCG-T配下はビルド不要のHTML/CSS/JavaScriptです。各HTMLを直接編集できます。共通のヘッダー・フッターを変更する場合は全ページに反映してください。文章の原稿はアプリリポジトリの `org/marketing/` にあります。
+- TCG-T 配下はビルド不要の HTML/CSS/JavaScript。各 HTML を直接編集する。共通のヘッダー・フッターを変えるときは全ページに反映する
+- 操作アイコンは各機能の手順に併記している。共通スタイルは `tcg-t/assets/inline-icons.css`、画像は `tcg-t/assets/icons/`
+- 文章のもとになった原稿・広報の資料は、アプリのリポジトリ（`~/work/TCG-T`）の `docs/marketing/`。公開物の一覧は同じリポジトリの `docs/public-inventory.md`
+- 画面例はデモ用のカードで撮ったもの。実在のカードゲームの名前・画像を載せない
+
+## 公開日に直すところ（2026-10-24 時点）
+
+- `tcg-t/index.html`・`tcg-t/updates/index.html` の「ストア公開準備中」を、App Store・Google Play へのリンクに差し替える
+- 問い合わせの Google フォームは公開済み。受信の確認が済んだら `tcg-t/support/` に載せる（今はメール窓口だけ）
 
 ## ローカル確認
 
-リポジトリ直下で `python3 -m http.server 8765 --bind 127.0.0.1` を実行し、`http://127.0.0.1:8765/tcg-t/` を開きます。法律まわりのページも組み立て済みの HTML なので、この簡易サーバーで確認できます。
+リポジトリ直下で `python3 -m http.server 8765 --bind 127.0.0.1` を実行し、`http://127.0.0.1:8765/tcg-t/` を開く。法律まわりのページも組み立て済みの HTML なので、この簡易サーバーで確認できる。
 
-## 公開前の確認
+## 公開
 
-ストアリンクとGoogleフォームは未確定のため準備中です。確定後に差し替えてください。掲載画像は既存のiOSデモスクリーンショットです。公開候補版で手順・表示を照合し、必要な画面を追加撮影してください。フォームの運用と公開時には問い合わせ情報の取り扱いも確定してください。
-
-この変更だけでは公開されません。既存のGitHub Pagesの配信対象へ反映してから実URLを確認してください。
-
-操作アイコンは各機能の手順に併記しています。共通スタイルは `tcg-t/assets/inline-icons.css`、元画像は `tcg-t/assets/icons/` です。
-
-- `tcg-t/guide/billing/`：料金・ポイント・Premium。ストアの実価格は公開前に確認し、固定額を掲載する場合は表示の整合性を確認してください。
+`main` に push すると GitHub Pages から配信される。**push は毎回ユーザーの確認を取ってから。** push したら実 URL を開いて確かめる。
