@@ -7,6 +7,7 @@
 | URL | ファイル | 作り方 |
 |---|---|---|
 | `/` | `index.html` | 直接編集（AIyabane の入口・アプリ一覧・事業者情報） |
+| `/en/`・`/tcg-t/en/`・`/tcg-t/support/en/` | 各 `index.html` | 直接編集。上の日本語版の英語版（2026-10-27 追加）。下の「英語のページ」 |
 | `/privacy/`・`/privacy/en/`・`/tokushoho/`・`/delete-account/`・`/delete-account/en/` | 各 `index.html` | **原稿 `_src/*.md` を `python3 tools/build_pages.py` で組み立てる**。HTML を直接直さない |
 | `/tcg-t/…` | 各 `index.html` | 直接編集（下記） |
 
@@ -36,10 +37,16 @@
 - 文章のもとになった原稿・広報の資料は、アプリのリポジトリ（`~/work/TCG-T`）の `docs/marketing/`。公開物の一覧は同じリポジトリの `docs/public-inventory.md`
 - 画面例はデモ用のカードで撮ったもの。実在のカードゲームの名前・画像を載せない
 
+## 英語のページ（2026-10-27）
+
+- 英語版があるのはトップ・TCG-T 紹介・サポート・プライバシーポリシー・アカウント削除だけ。ガイド・更新情報・特商法は日本語のみで、英語ページからは「(Japanese)」と書いてリンクする
+- 対になるページは、ヘッダーのナビに相手の言語へのリンク（「English」／「日本語」）と `<link rel="alternate" hreflang>` を置く。片方の内容を変えたら、もう片方も直す
+- 英語のサポートはメールを主な窓口にしている（問い合わせフォームが日本語のため）
+- 法律まわりの英語ページのヘッダー・フッターのリンク先は `tools/build_pages.py` の `LABELS['en']`
+
 ## 公開日に直すところ（2026-10-24 時点）
 
-- `tcg-t/index.html`・`tcg-t/updates/index.html` の「ストア公開準備中」を、App Store・Google Play へのリンクに差し替える
-- 問い合わせの Google フォームは公開済み。受信の確認が済んだら `tcg-t/support/` に載せる（今はメール窓口だけ）
+- `tcg-t/index.html`・`tcg-t/updates/index.html` の「ストア公開準備中」を、App Store・Google Play へのリンクに差し替える。英語の `tcg-t/en/index.html`・`en/index.html` の「Coming soon」と、日本語のトップ `index.html` の「準備中」も同じく
 
 ## ローカル確認
 
