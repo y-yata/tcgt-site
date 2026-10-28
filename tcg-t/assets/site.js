@@ -1,4 +1,8 @@
 document.documentElement.classList.add('js');
+const en = document.documentElement.lang === 'en';
+const text = en
+  ? { found: n => `${n} guide${n === 1 ? '' : 's'} found`, copied: 'Copied', selectToCopy: 'Select the text to copy', copy: 'Copy' }
+  : { found: n => `${n}件のガイドが見つかりました`, copied: 'コピーしました', selectToCopy: '選択してコピーしてください', copy: 'コピー' };
 const search = document.querySelector('#guide-search');
 if (search) {
   const cards = [...document.querySelectorAll('[data-search]')];
@@ -12,7 +16,7 @@ if (search) {
       if (match) count++;
     });
     document.querySelector('#no-results').hidden = count !== 0;
-    document.querySelector('#search-status').textContent = query ? `${count}件のガイドが見つかりました` : '';
+    document.querySelector('#search-status').textContent = query ? text.found(count) : '';
   });
 }
 document.querySelectorAll('[data-copy]').forEach(button => {
@@ -20,15 +24,15 @@ document.querySelectorAll('[data-copy]').forEach(button => {
     const text = button.parentElement.querySelector('code').textContent;
     try {
       await navigator.clipboard.writeText(text);
-      button.textContent = 'コピーしました';
+      button.textContent = text.copied;
     } catch {
-      button.textContent = '選択してコピーしてください';
+      button.textContent = text.selectToCopy;
       const selection = window.getSelection();
       const range = document.createRange();
       range.selectNodeContents(button.parentElement.querySelector('code'));
       selection.removeAllRanges(); selection.addRange(range);
     }
-    setTimeout(() => { button.textContent = 'コピー'; }, 2500);
+    setTimeout(() => { button.textContent = text.copy; }, 2500);
   });
 });
 if ('IntersectionObserver' in window) {

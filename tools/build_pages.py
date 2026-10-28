@@ -20,22 +20,22 @@ MARKED = 'marked@15.0.12'
 LABELS = {
     'ja': {
         'skip': '本文へスキップ', 'nav': 'メインナビゲーション', 'guide': '使い方', 'support': 'サポート',
-        'updated': '最終更新', 'home': 'AIyabane', 'root': '/', 'top': '/tcg-t/', 'support_url': '/tcg-t/support/',
+        'updated': '最終更新', 'home': 'AIyabane', 'root': '/', 'top': '/tcg-t/', 'support_url': '/tcg-t/support/', 'guide_url': '/tcg-t/guide/',
         'foot': [('/', 'AIyabane'), ('/tcg-t/support/', 'お問い合わせ'), ('/privacy/', 'プライバシーポリシー'),
                  ('/tokushoho/', '特定商取引法に基づく表記'), ('/delete-account/', 'アカウントの削除'),
                  ('/tcg-t/updates/', '更新情報')],
     },
     'en': {
-        'skip': 'Skip to content', 'nav': 'Main navigation', 'guide': 'Guide (Japanese)', 'support': 'Support',
-        'updated': 'Last updated', 'home': 'AIyabane', 'root': '/en/', 'top': '/tcg-t/en/', 'support_url': '/tcg-t/support/en/',
+        'skip': 'Skip to content', 'nav': 'Main navigation', 'guide': 'Guide', 'support': 'Support',
+        'updated': 'Last updated', 'home': 'AIyabane', 'root': '/en/', 'top': '/tcg-t/en/', 'support_url': '/tcg-t/support/en/', 'guide_url': '/tcg-t/guide/en/',
         'foot': [('/en/', 'AIyabane'), ('/tcg-t/support/en/', 'Contact'), ('/privacy/en/', 'Privacy Policy'),
-                 ('/delete-account/en/', 'Delete your account'), ('/tcg-t/updates/', 'Updates (Japanese)')],
+                 ('/delete-account/en/', 'Delete your account'), ('/tcg-t/updates/en/', 'Updates')],
     },
 }
 
 TEMPLATE = """<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{title}</title><meta name="description" content="{description}"><link rel="canonical" href="https://aiyabane.com/{path}"><link rel="icon" href="/tcg-t/assets/icon.png"><link rel="stylesheet" href="/tcg-t/assets/site.css"></head>
-<body><a class="skip" href="#main">{skip}</a><header class="top"><div class="wrap"><a class="brand" href="{top}"><img src="/tcg-t/assets/icon.png" width="40" height="40" alt=""><span>TCG-T<small>TCG TRAINING</small></span></a><nav aria-label="{nav}"><a href="/tcg-t/guide/">{guide}</a><a href="{support_url}">{support}</a></nav></div></header>
+<body><a class="skip" href="#main">{skip}</a><header class="top"><div class="wrap"><a class="brand" href="{top}"><img src="/tcg-t/assets/icon.png" width="40" height="40" alt=""><span>TCG-T<small>TCG TRAINING</small></span></a><nav aria-label="{nav}"><a href="{guide_url}">{guide}</a><a href="{support_url}">{support}</a></nav></div></header>
 <main id="main"><div class="page-head"><div class="wrap"><div class="breadcrumb"><a href="{root}">{home}</a><span>/</span><a href="{top}">TCG-T</a><span>/ {heading}</span></div><p class="eyebrow">{eyebrow}</p><h1>{heading}</h1><p class="description">{description}</p><div class="meta">{meta}</div></div></div>
 <div class="wrap legal-body"><article class="article">
 {body}
@@ -77,7 +77,7 @@ def build(src: pathlib.Path) -> pathlib.Path:
         description=html.escape(meta.get('description', '')),
         path=re.sub(r'index\.html$', '', out_path),
         skip=lab['skip'], nav=lab['nav'], guide=lab['guide'], support=lab['support'], home=lab['home'],
-        root=lab['root'], top=lab['top'], support_url=lab['support_url'],
+        root=lab['root'], top=lab['top'], support_url=lab['support_url'], guide_url=lab['guide_url'],
         heading=html.escape(meta['heading']),
         eyebrow=html.escape(meta.get('eyebrow', '')),
         meta=' · '.join(meta_parts),
