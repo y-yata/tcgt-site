@@ -46,9 +46,9 @@
 - 検索・コピーの文言は `tcg-t/assets/site.js` が `<html lang>` を見て切り替える
 - 法律まわりの英語ページのヘッダー・フッターのリンク先は `tools/build_pages.py` の `LABELS['en']`
 
-## 公開日に直すところ（2026-10-24 時点）
+## 公開日に直したところ（2026-10-31）
 
-- `tcg-t/index.html`・`tcg-t/updates/index.html` の「ストア公開準備中」を、App Store・Google Play へのリンクに差し替える。英語の `tcg-t/en/index.html`・`tcg-t/updates/en/index.html`・`en/index.html` の「Coming soon」と、日本語のトップ `index.html` の「準備中」も同じく
+- トップ（日英）・`/tcg-t/`（日英）・更新情報（日英）の「準備中」「Coming soon」を、App Store（`id6814529505`）・Google Play（`com.tcgt.app`）へのリンクに差し替えた。更新情報には 1.0.1（初回公開）を載せた
 
 ## ローカル確認
 
